@@ -1,3 +1,169 @@
-h1{
-    color:red;
+@font-face {
+    font-family: "norse";
+    src: url(fonts/Norse-Bold.woff2) format('woff2');
+    font-weight: bold;
+}
+
+:root {
+    --space-xxs: 4px;
+    --space-xs: 8px;
+    --space-sm: 12px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-2xl: 48px;
+    --space-3xl: 64px;
+    --space-4xl: 96px;
+    --space-5xl: 128px;
+    --space-6xl: 192px;
+    --space-7xl: 256px;
+    --space-8xl: 384px;
+    --space-9xl: 512px;
+    --space-10xl: 640px;
+    --space-11xl: 768px;
+
+    --color-main: #596D48;
+    --color-secondary: #E5E7EB;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    display: flex;
+}
+
+.left {
+    width: 30%;
+    flex: none;
+    background-image: url("images/halie-west.jpg");
+    background-size: cover;
+    position: relative;
+    height:100vh;
+}
+
+.logo{
+    position: absolute;
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    width:100%;
+    font-family: "norse";
+    font-size:4rem;
+    top:30%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    width:70px;
+}
+
+.main{
+    background-color:var(--color-secondary);
+    font-size:18px;
+    font-weight: bold;
+    font-family: sans-serif;
+    flex:1;
+}
+
+.main-top{
+    padding: var(--space-xl);
+    margin-top: var(--space-3xl)
+}
+
+.main-top p {
+    max-width:66ch;
+}
+
+form{
+    background-color:white;
+}
+
+form h1{
+    font-size:20px;
+}
+
+form label{
+    text-transform: uppercase;
+    font-size:10px;
+}
+
+.input label,
+.input input{
+    display:block;
+}
+
+.input label{
+    margin-bottom: var(--space-xxs);
+}
+
+.main-form{
+    box-shadow: 10px 10px black;
+    z-index: 999;
+}
+
+.input input{
+    border:1px solid var(--color-secondary);
+    padding: var(--space-xxs) var(--space-xs);
+    border-radius:var(--space-xxs);
+}
+
+.input > div {
+    display:flex;
+    gap:var(--space-3xl);
+}
+
+.main-form{
+    padding:var(--space-xl);
+}
+
+.main-bottom{
+    background-color:var(--color-secondary);
+    padding:var(--space-xl);
+}
+
+form button{
+    background-color: var(--color-main);
+    color:white;
+    padding:var(--space-sm) var(--space-2xl);
+    border:none;
+    border-radius:5px;
+    font-weight: bold;
+    box-shadow: 1px 1px 3px grey;
+}
+
+form button:hover{
+    cursor: pointer;
+    opacity: .9;
+}
+
+.main-bottom{
+    box-shadow: inset 0 2px 10px #ccc;
+}
+
+.main-bottom p {
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.main-bottom a {
+    color:var(--color-main);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-bottom a:hover{
+    text-decoration: underline;
+}
+
+form input:focus{
+    outline:none;
+    border:1px solid blue;
+    box-shadow:2px 2px 2px var(--color-secondary);
+}
+
+form input[type=password]:invalid{
+    border-color: red;
 }
