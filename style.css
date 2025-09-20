@@ -60,6 +60,20 @@ main {
     width:70px;
 }
 
+.credit{
+    font-family: sans-serif;
+    color:white;
+    font-size: 12px;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.credit a:link{
+    color:white;
+}
+
 .main{
     background-color:var(--color-secondary);
     font-size:18px;
